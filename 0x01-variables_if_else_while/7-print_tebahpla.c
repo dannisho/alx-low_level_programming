@@ -2,7 +2,7 @@
 #include <stdlib.h>
 /**
  * main - main func
- * Return: 0 on 
+ * Return: 0 on
  */
 int main(void)
 {
