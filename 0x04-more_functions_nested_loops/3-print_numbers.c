@@ -1,48 +1,35 @@
 #include "main.h"
 
-#include <stdio.h>
-
 /**
- *print_number - prints int with putchar
+ *print_numbers - Prints the number zero to nine
  *
- *@n: takes number, hello
- *
- *Return: void
- *
+ *Return: Always 0 (Success)
  */
 
 
 
-void print_number(int n)
+void print_numbers(void)
 
 {
 
-	unsigned int m;
+
+
+	int i;
 
 
 
-	if (n < 0)
+	i = 0;
 
-	{
 
-		_putchar('-');
 
-		m = -n;
+	for (i = 0; i < 10; i++)
 
-	}
 
-	else
 
-	{
+		_putchar(i + '0');
 
-		m = n;
 
-	}
 
-	if (m / 10 != 0)
-
-		print_number(m / 10);
-
-	_putchar((m % 10) + '0');
+	_putchar ('\n');
 
 }
