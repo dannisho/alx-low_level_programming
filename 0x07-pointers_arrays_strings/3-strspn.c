@@ -1,3 +1,4 @@
+#include "main.h"
 /**
  * _strspn - function  calculates  the  length (in bytes) of the initial
  * segment of s which consists entirely of bytes in accept.
