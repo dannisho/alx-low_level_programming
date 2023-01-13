@@ -1,26 +1,29 @@
-/*
- * File: 0-print_dlistint.c
- * Auth: Brennan D Baraban
- */
-
 #include "lists.h"
 
 /**
- * print_dlistint - Prints all the elements of a dlistint_t list.
- * @h: The head of the dlistint_t list.
+ * dlistint_len - Number of ll
  *
- * Return: The number of nodes in the list.
+ * @h: Head
+ *
+ * Return: Number of elements
  */
-size_t print_dlistint(const dlistint_t *h)
+
+size_t dlistint_len(const dlistint_t *h)
 {
-	size_t nodes = 0;
+	unsigned int count = 0;
+	const dlistint_t *list;
 
-	while (h)
+	list = malloc(sizeof(dlistint_t));
+	list = h;
+
+	if (list == NULL)
 	{
-		nodes++;
-		printf("%d\n", h->n);
-		h = h->next;
+		return (0);
 	}
-
-	return (nodes);
+	while (list)
+	{
+		list = list->next;
+		count++;
+	}
+	return (count);
 }
